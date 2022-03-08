@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="footer">
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2apWzyECwyZ?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</div>
+<div class="gifs">
+<img class="gifs" src="https://64.media.tumblr.com/67057a7bf098b955132bba140d61d3f4/d3b630f3d215d64c-3e/s640x960/91ae3b73f354c49e21bf90fde165cd4f55328cce.gifv" alt="description of gif" />
+</div>
+<div class="gifs">
+<img class="gifs" src="https://64.media.tumblr.com/d23a4fb7cff74243941ad85cae5b7f4f/656d5248292c69f9-dd/s640x960/d7bd4b592557caeb416d3dfd64135077f02db66c.gifv" alt="description of gif" />
+</div>
+<div class="gifs">
+<img class="gifs" src="https://64.media.tumblr.com/f664ee2132205fcdbf2898db64c4c8a2/656d5248292c69f9-22/s640x960/e7c2335bfd2fad716efa9efe0a872ba87e06b6b7.gifv" alt="description of gif" />
+
+<p class="timer" id="demo"></p>
+</div>
+<style>
+body {
+  background-image: url('fondo.jpg');
+}
+</style>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 28, 2022 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+//  if (distance < 0) {
+//    clearInterval(x);
+//    document.getElementById("demo").innerHTML = "EXPIRED";
+//  }
+}, 1000);
+
+</script>
+</body>
+</html>
+
+<style>
+
+body {
+  background-image: url('fondo.jpg');
+}
+div {
+  font-family: lovefont;
+}
+
+.gifs{
+	width:100%;
+	max-width: 400px;
+	display:inline-block;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.timer {
+  position: absolute;
+  left: 110px;
+  top: 418px;
+  font-size: 165px;
+  margin-top: 0px;
+  color:#fdee5f
+}
+@font-face {
+  font-family: lovefont;
+  src: url(Daughter.ttf);
+}
+</style>
+
+
